@@ -4,7 +4,7 @@ const assert = std.debug.assert;
 const BITS_PER_BYTE     : u64 = @bitSizeOf(u8);
 const EVAL_BRANCH_QUOTA : u32 = 2_000;
 
-pub fn mmio(comptime PackedT: type) type
+pub fn regmap(comptime PackedT: type) type
 {
   @setEvalBranchQuota(EVAL_BRANCH_QUOTA);
 
